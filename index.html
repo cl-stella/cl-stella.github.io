@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv='cache-control' content='no-cache'>
+  <meta http-equiv='expires' content='0'>
+  <meta http-equiv='pragma' content='no-cache'>
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+<!--  <meta property="og:image" content="static/image/your_banner_image.png" />-->
+<!--  <meta property="og:image:width" content="1200"/>-->
+<!--  <meta property="og:image:height" content="630"/>-->
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>FLAVA</title>
+<!--  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">-->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+<!--  <style>-->
+<!--      .left-align {-->
+<!--          text-align: left;-->
+<!--      }-->
+<!--  </style>-->
+
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Lifelong Audio-video Masked Autoencoder with Forget-robust Localized Alignments</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                Jaewoo Lee<sup>*,1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://jaehong31.github.io/" target="_blank">Jaehong Yoon</a><sup>*,2</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://wonjae.kim/" target="_blank">Wonjae Kim</a><sup>3</sup>,</span>
+                    <span class="author-block">
+                      <a href="https://github.com/YunjiKim" target="_blank">Yunji Kim</a><sup>3</sup>,</span>
+                      <span class="author-block">
+                        <a href="http://www.sungjuhwang.com/" target="_blank">Sung Ju Hwang</a><sup>1,4</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1 </sup>KAIST, <sup>2 </sup>UNC Chapel Hill, <sup>3 </sup>NAVER AI Lab <sup>4 </sup>DeepAuto</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2310.08204" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/G-JWLee/FLAVA_code" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present a lifelong audio-video masked autoencoder that continually learns the multimodal representations from a video stream containing audio-video pairs, while its distribution continually shifts over time. Specifically, we propose two novel ideas to tackle the problem: (1) Localized Alignment: We introduce a small trainable multimodal encoder that predicts the audio and video tokens that are well-aligned with each other. This allows the model to learn only the highly correlated audiovisual patches with accurate multimodal relationships. (2) Forget-robust multimodal patch selection: We compare the relative importance of each audio-video patch between the current and past data pair to mitigate unintended drift of the previously learned audio-video representations. Our proposed method, FLAVA (Forget-robust Localized Audio-Video Alignment), therefore, captures the complex relationships between the audio and video modalities during training on a sequence of pre-training tasks while alleviating the forgetting of learned audiovisual correlations. Our experiments validate that FLAVA outperforms the state-of-the-art continual learning methods on several benchmark datasets under continual audio-video representation learning scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+     <h2 class="title">Motivation</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/motivation1.png" alt="MY ALT TEXT"
+       style="display: block; margin: 0 auto; height:300px;"
+        />
+        <h2 class="subtitle has-text-centered">
+        <br>
+          <b>Data distribution shift.</b><br>
+          <p class="left-align">
+          In real-word scenarios, the model should handle a <i>dynamic shift of audiovisual data distribution</i> when training on videos,
+          as the agent's surroundings can continuously change over time.
+          </p>
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/motivation2.png" alt="MY ALT TEXT"
+        />
+        <h2 class="subtitle has-text-centered">
+        <br>
+          <b>Visualization of cross attention maps.</b><br>
+          <p class="left-align">
+          Learning audio-video data with continuously changing semantic categories is a nontrivial problem due to two critical challenges:<br>
+          <i>1) sparse spatiotemporal correlation between the audio-video pairs,</i> and <i>2) representational forgetting of audio-video relationships.</i>
+          </p>
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/motivation3.png" alt="MY ALT TEXT"
+        />
+        <h2 class="subtitle has-text-centered">
+        <br>
+         <b>Cross-attention maps obtained by matched or unmatched data pairs.</b><br>
+         <p class="left-align">
+          In both modalities, the cross-attention maps with the past data often concentrate on misleading locations when the past data is
+          largely different from the current task.
+         </p>
+       </h2>
+     </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Method</h2>
+      <div class="columns is-centered has-text-centered">
+          <div class="item">
+            <img src="static/images/method.png" alt="MY ALT TEXT"/>
+              <h2 class="subtitle has-text-centered">
+              <br>
+              <b>Overview of our FLAVA (Forget-robust Localized Audio Video Alignments)</b><br>
+              <p class="left-align">
+              Our method harnesses cross-modal attention maps from the AVM module to compute importance scores in order to identify highly correlated patches <b>(Localized Audio-Video Alignment)</b>.
+              Comparing the attention maps created by the current queries with those generated by past queries, we generate pruning probability matrices that compare the relative importance of
+              each patch between the current task and past tasks <b>(Forget-robust multimodal patch selection)</b>. Finally, we select patches to continually pre-train the model <b>(Multimodal patch selection for continual masked modeling)</b>.
+              </p>
+            </h2>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+     <h2 class="title is-3">Experiments</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/retrieval_result.png" alt="MY ALT TEXT"
+        />
+        <h2 class="subtitle has-text-centered">
+        <br>
+          <b>Retrieval experiment results.</b><br>
+          Results of audiovisual zero-shot retrieval task on VGGSound and AudioSet.
+        </h2>
+      </div>
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/classification_result.png" alt="MY ALT TEXT"
+        />
+        <h2 class="subtitle has-text-centered">
+        <br>
+          <b>Classification experiment results.</b><br>
+          VGGSound & AudioSet audiovisual classification task results.
+        </h2>
+      </div>
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/memory_size_result.png" alt="MY ALT TEXT"
+        />
+        <h2 class="subtitle has-text-centered">
+        <br>
+          <b>Downstream performance on various rehearsal memory sizes.</b><br>
+          <p class="left-align">
+          We evaluate downstream task performances on the pre-trained models with various rehearsal memory sizes on the VGGSound dataset.
+          </p>
+        </h2>
+      </div>
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/efficiency_analysis.png" alt="MY ALT TEXT"
+        />
+        <h2 class="subtitle has-text-centered">
+        <br>
+          <b>Efficiency analysis.</b><br>
+          <p class="left-align">
+          GPU memory occupancy (GPU M.) is measured in GB. Throughput (T.P.) of baselines is measured in sample/sec. Both are estimated in single V100 with batch size of 9.
+          </p>
+        </h2>
+      </div>
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/sampling_method_result.png" alt="MY ALT TEXT"
+        />
+        <h2 class="subtitle has-text-centered">
+        <br>
+          <b>Sampling methods.</b><br>
+            Retrieval results by various methods of sampling on VGGSound dataset.
+        </h2>
+      </div>
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/modality_gap.png" alt="MY ALT TEXT"
+        />
+        <h2 class="subtitle has-text-centered">
+        <br>
+          <b>Modality gap estimation.</b><br>
+            <p class="left-align">
+            (Left) Average modality gap difference between the modality gap estimated at the completion of the last task and modality gap estimated at the completion of each task.
+            (Right) Estimation of modality gap after the completion of each task.
+            </p>
+        </h2>
+      </div>
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/modality_gap_vis.png" alt="MY ALT TEXT"
+        />
+        <h2 class="subtitle has-text-centered">
+        <br>
+          <b>Modality gap visualization.</b><br>
+            Visualizations of the modality gap corresponding to the sports task with the model pre-trained up to the last task.
+        </h2>
+      </div>
+
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{lee2023lifelong,
+      title={Lifelong Audio-video Masked Autoencoder with Forget-robust Localized Alignments},
+      author={Jaewoo Lee and Jaehong Yoon and Wonjae Kim and Yunji Kim and Sung Ju Hwang},
+      year={2023},
+      eprint={2310.08204},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
