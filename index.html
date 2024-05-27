@@ -297,10 +297,12 @@
     <div class="column is-four-fifths">
       <h2 class="title is-5">Efficiency analysis</h2>
 
-    <center><img src="static/images/result_2.png" alt="Teaser" width="80%"></center>
+    <center><img src="static/images/result_2.png" alt="Teaser" width="90%"></center>
 
     <div class="content has-text-justified">
-      We measure GPU memory occupancy (GPU M.) in GB, estimated in a V100 with a batch size of 9. <i>STELLA</i> achieves an efficiency gain of <b>43.59%</b>.
+      We measure GPU memory occupancy (GPU M.) in GB and Throughput (T.P.) in sample/sec. Both are estimated in single V100 with a batch size of 15 for <i>STELLA++</i> and 9 for other methods.
+      <i>STELLA+</i> achieves an efficiency gain of <b>44.59%</b> and ranks the second best throughput.
+      <i>STELLA++</i> shows the benefit of the reduced GPU memory consumption of our method, resulting in improved performance compared to other baselines.
     </div>
   </div>
   </div>
